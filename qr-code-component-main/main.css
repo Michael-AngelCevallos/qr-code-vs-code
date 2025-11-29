@@ -1,28 +1,73 @@
+/* ======= RESET STYLES =======
+   Removes default padding/margin from ALL elements
+   so we have full control over spacing.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevents padding from increasing element size */
+}
+
+/* ======= BODY STYLING =======
+   - Sets the background color
+   - Uses a clean modern font
+   - Centers the card vertically and horizontally
+*/
 body {
-    background-color: #d5e1ef;
+  background-color: hsl(212, 45%, 89%); /* Light gray background */
+  font-family: 'Outfit', sans-serif;    /* Google font used in challenge */
+  display: flex;       /* Allows easy centering using flexbox */
+  align-items: center; /* Vertically center card */
+  justify-content: center; /* Horizontally center card */
+  height: 100vh;       /* 100% of viewport height to perfectly center */
 }
 
-.main-container {
-    margin: 0 auto; /* CNETERS THE BOX HORIZONTIALLY ON THE PAGE*/
-    border-radius: 20px; /* rOUNDS OUT THE CORNERS OF THE bOX */
-    width: 400px;
-    background-color: #ffff;
-    padding: 20px; /* Puts space around the content 8*/
-    padding-bottom: 300px;
+/* ======= CARD CONTAINER =======
+   This is the white box in the middle that holds the content.
+   - Padding gives the content breathing room inside the box.
+   - Border-radius makes the corners rounded.
+   - Shadow gives it a soft lifted appearance.
+*/
+.card {
+  background-color: white;
+  width: 320px;             /* Keeps the card a consistent size */
+  padding: 20px;            /* Space inside the card */
+  border-radius: 20px;      /* Rounded corners */
+  text-align: center;       /* Centers all text inside */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Soft drop shadow */
 }
 
-.blue-box {
-    background-color: #2b7dfa;
-    padding: 40px;
-    border-radius: 10px;
-    height: 300px;
-    background-image: url('images/image-qr-code.png');
-    overflow: hidden;
+/* ======= QR IMAGE =======
+   Makes the image fill the card width properly.
+   Rounds corners to match the card style.
+*/
+.card img {
+  width: 100%;         /* Makes the image scale to fit card width */
+  border-radius: 10px; /* Rounded corners */
 }
 
-.qr-code-img {
-    width: 100%; 
-    height: 100%;  
-    object-fit: contain;
-   
+/* ======= TITLE TEXT (H1) =======
+   - Larger font
+   - Margin controls spacing
+   - Color matches design specs
+*/
+.card h1 {
+  font-size: 1.1rem;        /* Slightly larger than default */
+  margin: 20px 0 10px;     /* Space above & below heading */
+  color: hsl(218, 44%, 22%); /* Dark blue heading color */
+  font-weight: 750;        /* Bold */
+}
+
+/* ======= PARAGRAPH TEXT =======
+   - Smaller text
+   - Light gray color for readability
+   - Padding to keep it spaced nicely
+*/
+.card p {
+  font-size: 15px;           /* Matches challenge specs */
+  color: hsl(220, 15%, 55%); /* Light gray text color */
+  font-weight: 500;          /* Normal weight */
+  padding: 0 10px;           /* Slight horizontal padding */
+  margin-bottom: 10px;       /* Small space at bottom */
 }
