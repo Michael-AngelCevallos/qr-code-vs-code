@@ -1,3 +1,10 @@
 body {
     background-color: #d5e1ef;
 }
+
+.main-container {
+    margin: 0 auto; /* CNETERS THE BOX HORIZONTIALLY ON THE PAGE*/
+    border-radius: 20px; /* rOUNDS OUT THE CORNERS OF THE bOX */
+    width: 400px;
+    color: aquamarine;
+}
